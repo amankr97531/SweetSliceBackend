@@ -20,7 +20,10 @@ const placeOrder = async (req, res) => {
 const getOrders = async (req, res) => {
   try {
     const orders = await Order.find()
-      .populate("userId", "name email")
+      .populate(
+        "userId",
+        "name email mobile"
+      )
       .sort({ createdAt: -1 });
 
     res.status(200).json({
