@@ -11,6 +11,7 @@ const categoryRoutes = require("./routes/categoryRoutes");
 const cakeRoutes = require("./routes/cakeRoutes");
 const cartRoutes = require("./routes/cartRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const userRoutes = require("./routes/userRoutes");
 
 const app = express();
 
@@ -28,8 +29,10 @@ app.use("/api/category", categoryRoutes);
 app.use("/api/cake", cakeRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/order", orderRoutes);
+app.use("/api/user", userRoutes);
 
-const PORT = process.env.PORT || 5001;
+
+const PORT = 5001;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
