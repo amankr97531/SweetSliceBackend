@@ -16,7 +16,7 @@ router.post("/add", addCake);
 
 router.get("/list", getAllCakes);
 
-router.get("/:id", getCakeById);
+
 
 router.put(
   "/update/:id",
@@ -37,5 +37,6 @@ router.get(
   "/search",
   searchCake
 );
+router.get("/:id", getCakeById);
 
 module.exports = router;
